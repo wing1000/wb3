@@ -1,0 +1,42 @@
+.navbar .navbar-inner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0;
+    background: #000000;
+    z-index: 1030;
+    color: #FFFFFF;
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    background: #3B3B3B;
+    text-align: left;
+    vertical-align: middle;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#3B3B3B), to(#000000));
+    background: -webkit-linear-gradient(#3B3B3B, #000000);
+    background: -moz-linear-gradient(#3B3B3B, #000000);
+    background: -ms-linear-gradient(#3B3B3B, #000000);
+    background: -o-linear-gradient(#3B3B3B, #000000);
+    background: linear-gradient(#3B3B3B, #000000);
+    -pie-background: linear-gradient(#3B3B3B, #000000);
+    behavior: url(PIE.htc);
+}
+
+.navbar .brand {
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    font-family: broadway;
+    padding-left: 0px;
+}
+.nav, .navbar {
+    margin-bottom: 15px;
+}
+.nav-pills a{font-size: 18px;}
+.nav-pills li a:hover, .nav-pills li a:focus {
+    color: #000000;
+    background-color: #CCCCCC;
+}

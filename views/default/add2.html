@@ -1,0 +1,35 @@
+<?py from __future__ import with_statement ?>
+<?py with capture_as('css'): ?>
+
+<script src="${BASE_URL}/static/kindeditor-4.1.7/kindeditor-all-min.js"></script>
+<script type="text/javascript" src="${BASE_URL}/static/kindeditor-4.1.7/lang/zh_CN.js"></script>
+<?py #endwith ?>
+
+<form class="span12" style="padding: 0;margin: 0;">
+	<label>标题</label>
+	<input type="text" name="title" placeholder="Title..." class="span5">
+	<label>分类</label>
+	<select class="span5">
+		<option value="1">分类1</option>
+
+	</select>
+
+	<label>内容</label>
+	<textarea id="content" name="content"   rows="30" cols="80" placeholder="Title..." class="span12"></textarea>
+	<div></div>
+
+	<button type="submit" class="btn">
+		Submit
+	</button>
+
+</form>
+<script type="text/javascript">
+	KindEditor.ready(function(K) {
+		window.editor = K.create('#content', {
+			themeType : 'simple',
+			uploadJson : '/photo/upload',
+			fileManagerJson : '/photo/upload/list',
+			allowFileManager : true
+		});
+	}); 
+</script>

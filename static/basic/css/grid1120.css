@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* 52framework grid
+
+16 cols by 40px, with a 20px gutter
+inspired by the http://www.1kbgrid.com/
+
+*/
+
+.col {
+	margin-left:10px; margin-right:10px;
+	display: inline;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+
+.row{
+	width: 1120px;
+	margin: 0 auto;
+}
+.row .row {
+	margin: 0 -10px;
+	width: auto;
+	display: inline-block;
+}
+
+/* Column widths, and element width based on grid */
+.col_1,.width_1  	{width:50px;}
+.col_2,.width_2  	{width:120px;}
+.col_3,.width_3  	{width:190px;}
+.col_4,.width_4  	{width:260px;}
+.col_5,.width_5  	{width:330px;}
+.col_6,.width_6  	{width:400px;}
+.col_7,.width_7  	{width:470px;}
+.col_8,.width_8     {width:540px;}
+.col_9,.width_9     {width:610px;}
+.col_10,.width_10   {width:680px;}
+.col_11,.width_11   {width:750px;}
+.col_12,.width_12   {width:820px;}
+.col_13,.width_13   {width:890px;}
+.col_14,.width_14   {width:960px;}
+.col_15,.width_15   {width:1030px;}
+.col_16,.width_16   {width:1100px;}

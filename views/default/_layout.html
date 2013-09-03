@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>wb3</title>
+		<link rel="stylesheet" href="${BASE_URL}/static/basic/css/reset.css" type="text/css"  />
+		<link rel="stylesheet" href="${BASE_URL}/static/basic/css/css3.css"  type="text/css" media="screen" />
+		<link rel="stylesheet" href="${BASE_URL}/static/basic/css/general.css"  type="text/css" media="screen" />
+		<link rel="stylesheet" href="${BASE_URL}/static/basic/css/button.css" type="text/css" />
+		<link rel="stylesheet" href="${BASE_URL}/static/basic/css/form.css" type="text/css" />
+		<link rel="stylesheet" href="${BASE_URL}/static/basic/css/paging.css" type="text/css" />
+
+		<link rel="stylesheet" href="${BASE_URL}/static/css/grid900.css" type="text/css" />
+		<link rel="stylesheet" href="${BASE_URL}/static/css/fluid12.css" type="text/css" />
+		<link rel="stylesheet" href="${BASE_URL}/static/css/app.css" type="text/css" />
+		<link rel="stylesheet" href="${BASE_URL}/static/css/wb3_nav.css" type="text/css" />
+		<!--[if (gte IE 6)&(lte IE 8)]>
+		<script src="${BASE_URL}/static/basic/js/selectivizr.js"></script>
+		<![endif]-->
+		<script src="${BASE_URL}/static/js/jquery-1.10.2.js"></script>
+		<script src="${BASE_URL}/static/js/jquery-migrate-1.2.1.js"></script>
+		<script src="${BASE_URL}/static/basic/js/modernizr-1.7.min.js"></script>
+		<!-- this is the javascript allowing html5 to run in older browsers -->
+		<?py if not captured_as('css'): ?>
+		<!-- need to empty line -->
+		<?py #endif ?>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="header_inner">
+				<div class="grid_row">
+					<div class="col col_10"  >
+
+						<div class="logo left" >
+							wb3
+						</div>
+						<div class="nav_bar left"  >
+							<div class="nav" >
+								<ul  >
+									<li>
+										<a href="/doings">Doings</a>
+									</li>
+									<li>
+										<a href="/shop">Shop</a>
+									</li>
+									<li>
+										<a href="/blog">Blog</a>
+									</li>
+									<li>
+										<a href="/">曾经</a>
+									</li>
+								</ul>
+
+		 			</div>
+						</div>
+						<div class="right">
+
+							<div class="nav right">
+								<a class="btn btn-small btn-primary" href="/login">Login</a>
+							</div>
+							<div class="nav right">
+								<a class="btn btn-small btn-success" href="/signup">Sign Up</a>
+							</div>
+							<div class="nav right" >
+								<a class="btn btn-primary btn-small" href="/yours">yourse</a>
+
+							</div>
+							<div class="nav right">
+								<a class="btn btn-success btn-small" href="#">Add</a>
+							</div>
+
+							<div class="nav right">
+								<form class="navbar_search" action="">
+									<input type="text" class="search-query " placeholder="Search">
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid_row dashboard">
+			<div class="col col_10">
+				<div class="arrow_top"></div>
+
+			</div>
+			#{_content}
+		</div>
+
+		<footer>
+			<div class="grid_row">
+				<div class="col col_10">
+					fjdslfjsdl积分电流声开放的；是
+				</div>
+			</div>
+
+		</footer>
+	</body>
+</html>

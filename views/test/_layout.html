@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>WB3</title>
+	 
+		<!-- Le styles -->
+		<link href="${BASE_URL}/static/bootstrap/css/bootstrap.css"	rel="stylesheet" type="text/css" >
+		<link href="${BASE_URL}/static/css/fluid10.css"	rel="stylesheet" type="text/css" >
+		<link href="${BASE_URL}/static/css/grid960.css"	rel="stylesheet" type="text/css" >
+		<link href="${BASE_URL}/static/css/app.css"	rel="stylesheet" type="text/css" >
+		<!--
+		<link href="${BASE_URL}/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+		-->
+
+		<!--[if lte IE 6]>
+		<link rel="stylesheet" type="text/css" href="${BASE_URL}/static/bootstrap/css/bootstrap-ie6.css">
+		<link href="${BASE_URL}/static/css/app.ie6.css"	rel="stylesheet" type="text/css" >
+		<![endif]-->
+		<!--[if lte IE 7]>
+		<link rel="stylesheet" type="text/css" href="${BASE_URL}/static/bootstrap/css/ie.css">
+		<![endif]-->
+
+		<!--[if lt IE 8]><link rel="stylesheet" href="${BASE_URL}/static/bootstrap/css/bootstrap-ie7buttonfix.css"><![endif]-->
+		<!--[if IE 8]><link rel="stylesheet" href="${BASE_URL}/static/bootstrap/css/bootstrap-ie8buttonfix.css"><![endif]-->
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="${BASE_URL}/static/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<!--[if lt IE 9]><script src="${BASE_URL}/static/js/respond/respond.min.js"></script><![endif]-->
+		<script src="${BASE_URL}/static/js/jquery-1.10.1.js"></script>
+		<script src="${BASE_URL}/static/js/jquery-migrate-1.2.1.js"></script>
+		<script src="${BASE_URL}/static/bootstrap/js/bootstrap.js"></script>
+		<!--[if lte IE 6]>
+		<script type="text/javascript" src="${BASE_URL}/static/bootstrap/js/bootstrap-ie.js"></script>
+		<![endif]-->
+		<?py if not captured_as('css'): ?>
+		<!-- need to empty line -->
+		<?py #endif ?>
+
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-inverse navbar-static-top ">
+			<div class="navbar-inner">
+				<div class="container ">
+					<a class="brand" href="#"  >WB3</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav" >
+							<li class="active"  >
+								<a href="#"  >Blog</a>
+							</li>
+							<li>
+								<a href="#about">Doings</a>
+							</li>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="#contact">Contact</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle"
+								data-toggle="dropdown">Dropdown <b class="caret"></b> </a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Action</a>
+									</li>
+									<li>
+										<a href="#">Another action</a>
+									</li>
+									<li>
+										<a href="#">Something else here</a>
+									</li>
+									<li class="divider"></li>
+									<li class="nav-header">
+										Nav header
+									</li>
+									<li>
+										<a href="#">Separated link</a>
+									</li>
+									<li>
+										<a href="#">One more separated link</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<form class="  navbar-form  pull-right">
+							<input class="span2" type="text" placeholder="Email">
+							<input
+							class="span2" type="password" placeholder="Password">
+							<button type="submit" class="btn">
+								Sign in
+							</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container ">
+			<div class="row-fluid">
+
+				<div class="span3">
+					<div class="well sidebar-nav">
+						<ul class="nav nav-list">
+							<li class="nav-header">
+								Sidebar
+							</li>
+							<li class="active">
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li class="nav-header">
+								Sidebar
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li class="nav-header">
+								Sidebar
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+							<li>
+								<a href="#">Link</a>
+							</li>
+						</ul>
+					</div>
+					<!--/.well -->
+				</div>
+				<!--/span-->
+				<div class="span9">
+					#{_content}
+				</div>
+
+			</div>
+		</div>
+		<!--/row-->
+
+		<hr>
+
+		<footer>
+			<p>
+				&copy; Company 2013
+			</p>
+		</footer>
+
+		</div>
+		<!--/.fluid-container-->
+
+	</body>
+	<script type="text/javascript">
+		$('.popover').popover('toggle');
+	</script>
+</html>

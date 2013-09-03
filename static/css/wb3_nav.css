@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+.header {
+    color: #FFFFFF;
+    background: #222222;
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+}
+.header .header_inner {
+    background-color: #222222;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    min-width: 100%;
+    -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    vertical-align: middle;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#3B3B3B), to(#000000));
+    background: -webkit-linear-gradient(#3B3B3B, #000000);
+    background: -moz-linear-gradient(#3B3B3B, #000000);
+    background: -ms-linear-gradient(#3B3B3B, #000000);
+    background: -o-linear-gradient(#3B3B3B, #000000);
+    background: linear-gradient(#3B3B3B, #000000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3B3B3B', endColorstr='#000000', GradientType=0);
+}
+
+.logo {
+    font-size: 36px;
+    font-family: Broadway,"Arial Unicode MS";
+    padding: 10px 30px 10px 0px;
+}
+
+.header .nav_bar {
+    padding-top: 8px;
+}
+
+.header .element {
+    padding-top: 6px;
+}
+
+ 
+.nav_title {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 10px 0px 10px 0px;
+}
+.nav {
+    padding: 10px 0px 10px 0px;
+}
+.nav form{
+    padding: 0px;
+    margin: 0px;
+    *margin: 0px;
+} 
+.nav ul {
+    float: left;
+    list-style: none;
+    margin: 0;
+}
+.nav ul li {
+    float: left;
+    list-style: none;
+}
+.nav ul li:first-child {
+    float: left;
+    padding-left: 0px;
+}
+
+.nav ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin-right: 4px;
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    behavior: url(PIE.htc);
+}
+.nav ul .selected a, .nav ul .selected a:hover, .nav ul .selected a:focus {
+    color: #ffffff;
+}
+.nav ul li a:hover, .nav ul li a:focus {
+    text-decoration: none;
+    color: #00afe9;
+}
+
+.nav ul li a img {
+    max-width: none;
+}
+
+
+.nav_button ul li a {
+    color: #333333;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    behavior: url(PIE.htc);
+}
+
+.nav_button ul .selected a, .nav_button ul .selected a:hover, .nav_button ul .selected a:focus {
+    color: #ffffff;
+    background-color: #00afe9;
+}
+.nav_button ul .selected a:hover, .nav_button ul .selected a:focus {
+    color: #ffffff;
+    background-color: #00a0df;
+}
+.nav_button ul li a:hover, .nav_button ul li a:focus {
+    text-decoration: none;
+    background-color: #CCCCCC;
+    color: #000033;
+}
+.nav_list_wrap{
+	border: 1px solid #CCCCCC;
+	-moz-border-radius: 4px;
+	-webkit-border-radius:4px;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+	height: 400px;
+}
+.nav_list {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 0;
+  list-style: none;
+  width: 100%;
+}
+.nav_list li{ list-style: none;}
+.nav_list li a,
+.nav_list .nav-header {
+  padding:15px;
+  width: 100%;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.nav_list li  a {
+  padding: 3px 15px;
+}
+
+.nav_list .active a,
+.nav_list .active a:hover,
+.nav_list .active a:focus {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #0088cc;
+}
+
+.nav_list [class^="icon-"],
+.nav_list [class*=" icon-"] {
+  margin-right: 2px;
+}
+
+.nav_list .divider {
+  *width: 100%;
+  height: 1px;
+  margin: 9px 1px;
+  *margin: -5px 0 5px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #ffffff;
+}
+.navbar_search .search-query {
+  color: #ffffff;
+  background-color: #515151;
+  border-color: #111111;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
+     -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
+}
