@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # coding=utf-8
-'''
+"""
 Created on 2013-6-20
 
 @author: Tietang
-'''
+"""
 
 import MySQLdb
 import time

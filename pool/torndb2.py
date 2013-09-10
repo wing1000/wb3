@@ -77,71 +77,71 @@ class MySQlConnection(Connection):
 
 
 class Transaction():
-    '''
+    """
       基本用法1:
     ta = Transaction(dbconfig, poolConfig)
-    
+
     @ta
     def test(param1,param2,db):
         return db.get("select now() as time")
     test(param1,param2)
        注意db参数在函数的 第一个
-       
+
     基本用法1:
     ta=Transaction(dbconfig, poolConfig)
     def fun():
         //do something
     ta.execute(fun)
-    
+
     example1:
-    
+
     dbconfig = {
         "host":"127.0.0.1:4000",
         "user":"root",
         "password":"",
-        "database":"test"  
+        "database":"test"
     }
     poolConfig = {}
     ta = Transaction(dbconfig, poolConfig)
-    
+
     @ta
     def test(db):
         return db.get("select now() as time")
     @ta
     def insert(name, birthday, is_relative,db):
         return db.insert("insert into person(name,birthday,is_relative) values(%s,%s,%s)", name, birthday, is_relative)
-    
+
     class Test3():
         @staticmethod
         @ta
         def test(db):
             return db.get("select now() as time")
-        
- 
-    
+
+
+
     print test()
     from datetime import date
     print insert("x1", date.today(), 1)
     print Test3.test()
- 
+
 
     example2:
-    
+
     def test(db):
         return db.get("select now() as time")
-    
+
     def test2(db):
         return db.query("select now() as time")
-    
+
     class Test3():
         @staticmethod
         def test(db):
             return db.get("select now() as time")
-        
+
     class Test4():
         def test(self,db):
             return db.get("select now() as time")
-            
+
     t=Transaction(dbconfig, poolConfig)
     rs = t.execute(test)
     print rs.time
@@ -154,7 +154,7 @@ class Transaction():
     rs= t.execute(lambda db:db.get("select now() as time"))
     print rs.time
     t.destory()
-    '''
+    """
     
     def __init__(self, dbConfig=None, poolConfig=None, pool=None):
         '''可给定dbConfig 和poolConfig 或者pool'''

@@ -23,6 +23,14 @@ AAA.aaa += 3
 print obj1.aaa, obj2.aaa, AAA.aaa
 print obj1.__dict__, obj2.__dict__, AAA.__dict__
 obj1.xxx=90
+
 print obj1.xxx
+print obj1.__dict__, obj2.__dict__, AAA.__dict__
+
 print  hash("42uroeiwurwo32")
 print hex(2312)
+
+print "------------------------------------------"
+key=94324290
+x=int( str(key)[-5:])
+print (x%213)
