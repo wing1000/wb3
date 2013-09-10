@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 from os import environ
 import os.path
-import tenjin
-from tenjin.helpers import *
 import os
+
+import tenjin
+
+from tenjin.helpers import *
+
+
 WB3_VERSION = '1.0'  # 当前版本
 APP_NAME = environ.get("APP_NAME", "WB3")
 debug = not APP_NAME
@@ -32,53 +36,53 @@ MAIL_PASSWORD = 'xxx' #你的邮箱登录密码，用以发提醒邮件
 THEMES = ['default']
 THEME = 'default'
 
-
 import socket
+
 localIP = socket.gethostbyname(socket.gethostname())
 print localIP
 
-ipList = socket.gethostbyname_ex(socket.gethostname())
-for i in ipList:
-    if i != localIP:
-        print "external IP:%s"%i
+(hostname, aliaslist, ipaddrlist) = socket.gethostbyname_ex(socket.gethostname())
 
+print "hostname %s" % hostname
+print "ip address list:%s" % ipaddrlist
+print aliaslist
 
-BASE_URL = 'http://{0}:{1}'.format(localIP,HTTP_PORT)
+BASE_URL = 'http://{0}:{1}'.format(localIP, HTTP_PORT)
 ####友情链接列表，在管理后台也实现了管理，下面的链接列表仍然有效并排在前面
 LINK_BROLL = [
     {"text": 'SAEpy blog', "url": 'http://saepy.sinaapp.com'},
-    {"text": 'Sina App Engine', "url": 'http://sae.sina.com.cn/'},    
+    {"text": 'Sina App Engine', "url": 'http://sae.sina.com.cn/'},
 ]
 #使用SAE Storage 服务（保存上传的附件），需在SAE管理面板创建
-STORAGE_DOMAIN_NAME = 'attachment' 
+STORAGE_DOMAIN_NAME = 'attachment'
 # #配置Mysql 数据库信息
 
 MasterDbConfig = {
-    "host":"127.0.0.1:4000",
-    "user":"root",
-    "password":"",
-    "database":"spruce"  
+    "host": "127.0.0.1:4000",
+    "user": "root",
+    "password": "",
+    "database": "spruce"
 }
 SlaveDbConfig = {
-    "host":"127.0.0.1:4000",
-    "user":"root",
-    "password":"",
-    "database":"spruce"  
+    "host": "127.0.0.1:4000",
+    "user": "root",
+    "password": "",
+    "database": "spruce"
 }
-poolConfig = {}       
+poolConfig = {}
 
 
 # redis
 from redis_shard.shard import RedisShardAPI
 
-RedisServers = { 
-    'node1': {'host':'127.0.0.1', 'port':10000, 'db':0},
-    'node2': {'host':'127.0.0.1', 'port':11000, 'db':0},
-    'node3': {'host':'127.0.0.1', 'port':12000, 'db':0},
+RedisServers = {
+    'node1': {'host': '127.0.0.1', 'port': 10000, 'db': 0},
+    'node2': {'host': '127.0.0.1', 'port': 11000, 'db': 0},
+    'node3': {'host': '127.0.0.1', 'port': 12000, 'db': 0},
 }
 
 redis = RedisShardAPI(RedisServers)
-     
+
 PATH = os.getcwd()
 favicon_path = os.path.join(PATH, 'favicon.ico')
 
@@ -87,7 +91,8 @@ settings = {
     'static_path': os.path.join(PATH, 'static'),
 
 }
-Engine = tenjin.Engine(layout='_layout.html', path=[os.path.join('views', theme) for theme in THEMES] + ['views'], cache=tenjin.MemoryCacheStorage(), preprocess=True)
+Engine = tenjin.Engine(layout='_layout.html', path=[os.path.join('views', theme) for theme in THEMES] + ['views'],
+                       cache=tenjin.MemoryCacheStorage(), preprocess=True)
 # if __name__ == "__main__":
 #     html= Engine.render('home.html', {
 #             'title': "测试",
