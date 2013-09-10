@@ -78,18 +78,18 @@ class Pool:
         logging.debug(self)
         if self.lifo:
             self._pool = LifoQueue(self.maxActive) 
-            logging.debug("create a lifo queue")
+            logging.debug("create a lifo queue.")
         else:
             self._pool = Queue(self.maxActive)  # create the queue
-            logging.debug("create a FIFO queue")
+            logging.debug("create a FIFO queue.")
             
         self.poolableFactory = poolableFactory
        
         try:
-            logging.debug("Init {0} objects".format(self.maxIdle))
+            logging.info("Init {0} objects for pool.".format(self.maxIdle))
             for i in range(self.maxIdle):
                 self.put(self.poolableFactory.create())
-            logging.debug("Inited {0} objects".format(self.maxIdle))
+            logging.info("Inited {0} objects for pool.".format(self.maxIdle))
             self._available = True
             if self.timeBetweenEvictionRunsMillis > 0:
 #                 self.__startCheckThread()
@@ -167,13 +167,13 @@ class Pool:
                             self.put(obj)
                         else:
                             self.poolableFactory.destroy(obj)
-                            logging.debug("can't validate object: "+str(obj))
+                            logging.debug("can't validate object: " + str(obj))
                 else:
                     time.sleep(60)
                 time.sleep(0.1)
             except Exception, e :
                 
-                    logging.debug("validate object error. {0} {1}".format(self._pool.qsize(),str(e)))
+                    logging.debug("validate object error. {0} {1}".format(self._pool.qsize(), str(e)))
 
         
         

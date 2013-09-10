@@ -11,48 +11,49 @@ from hashlib import md5
 class User():
     @staticmethod
     @sta    
-    def check_has_user(db):
+    def userExists(db):
         return db.get('SELECT `user_id` FROM `sp_user` LIMIT 1')
     
     @staticmethod
     @sta
-    def get_all_user(db):
+    def allUser(db):
         return db.query('SELECT * FROM `sp_user`')
     
     @staticmethod
     @sta
-    def get_user_by_name(db, name):        
+    def getUserByName(db, name):        
         return db.get('SELECT * FROM `sp_user` WHERE `username` = \'%s\' LIMIT 1' % str(name))    
     
     @staticmethod
     @sta
-    def get_user_by_email(db, email):
+    def getUserByEmail(db, email):
         
         return db.get('SELECT * FROM `sp_user` WHERE `email` = \'%s\' LIMIT 1' % str(email))
+    
     @staticmethod
     @mta  
-    def add_new_user(db, name, email, pw):
+    def add(db, name, email, pw):
         if name and pw:
             query = "insert into `sp_user` (`username`,`email`,`password`,`create_at`,`update_at`) values(%s,%s,%s,%s,%s)"
-            now=datetime.now()
-            return db.insert(query, name,email, md5(pw.encode('utf-8')).hexdigest(),now,now)
+            now = datetime.now()
+            return db.insert(query, name, email, md5(pw.encode('utf-8')).hexdigest(), now, now)
         else:
             return None
         
     @staticmethod
     @mta
-    def update_passwd_by_id(db, id=None, pw=None):
+    def updatePasswordById(db, id=None, pw=None):
         if id and pw:
             query = "update `sp_user` set `password`=%s, `update_at`=%s where id_user=%s "
             
-            return db.execute(query, md5(pw.encode('utf-8')).hexdigest(),datetime.now(),id)
+            return db.execute(query, md5(pw.encode('utf-8')).hexdigest(), datetime.now(), id)
         else:
             return None
         
 
     @staticmethod
     @sta       
-    def check_user(db, name='', pw=''):
+    def checkUser(db, name='', pw=''):
         if name and pw:
             user = db.get_user_by_name(name)
             if user and user.name == name and user.password == pw:
@@ -156,4 +157,5 @@ CREATE TABLE `sp_user` (
         db.execute(sql)
         
 if __name__ == '__main__':
-    User.add_new_user( "xc" , "xx@134.com", "www")
+    User.add("xc" , "xx@134.com", "www")
+ 

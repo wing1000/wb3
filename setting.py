@@ -87,7 +87,7 @@ settings = {
     'static_path': os.path.join(PATH, 'static'),
 
 }
-Engine = tenjin.Engine(layout='_layout.html', path=[os.path.join('views', theme) for theme in THEMES] + ['views'], cache=tenjin.MemoryCacheStorage(), preprocess=True)
+Engine = tenjin.Engine(layout='_layout2.html', path=[os.path.join('views', theme) for theme in THEMES] + ['views'], cache=tenjin.MemoryCacheStorage(), preprocess=True)
 # if __name__ == "__main__":
 #     html= Engine.render('home.html', {
 #             'title': "测试",

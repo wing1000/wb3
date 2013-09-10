@@ -37,7 +37,7 @@ class Test(BaseHandler):
             'timestamp':  int(time()),
             'html_text': "<h1>H1标签</h1>",
         },layout="empty_layout.html")
-        
+
 class Timeline2(BaseHandler):
     def get(self):
         self.echo('timeline2.html', {
