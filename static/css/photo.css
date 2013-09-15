@@ -1,0 +1,158 @@
+.photo_col {
+    margin-bottom: 20px;
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.photo_preview, .photo_preview img {
+    overflow: hidden;
+}
+
+.photo_preview_6, .photo_preview_6 img {
+    height: 430px;
+    width: 430px;
+}
+
+.photo_preview_5, .photo_preview_5 img {
+    height: 355px;
+    width: 355px;
+}
+
+.photo_preview_8, .photo_preview_8 img {
+    height: 580px;
+    width: 580px;
+}
+
+.photo_preview_2, .photo_preview_2 img {
+    height: 130px;
+    width: 130px;
+}
+
+.photo_preview_3, .photo_preview_3 img {
+    height: 205px;
+    width: 205px;
+}
+
+.photo_preview_4, .photo_preview_4 img {
+    height: 280px;
+    width: 280px;
+}
+
+.photo_preview:hover .caption .title {
+    width: 210px
+}
+
+.photo_preview a {
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 1030;
+}
+
+.photo_preview img {
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3)
+}
+
+.photo_preview .caption {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    bottom: 50px;
+    background: #000;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 50px;
+    max-height: 50px;
+    min-height: 50px;
+    border: 0px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=65);
+}
+
+.photo_preview .caption a {
+    color: #CCCCCC;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.photo_preview .caption a:hover {
+    color: #00afe9;
+    text-decoration: none;
+}
+
+.photo_preview .caption .title {
+    width: 160px;
+    line-height: 16px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+    padding-top: 6px;
+}
+
+.photo_preview .caption .title a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.photo_preview .caption .info {
+    width: 160px;
+    line-height: 11px;
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+.photo_preview .caption .info a {
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.photo_preview .caption .title a, .photo_preview .caption .info a {
+    color: #CCCCCC;
+}
+
+.photo_preview .caption .info a:hover, .photo_preview .caption .title a:hover {
+    color: #00afe9;
+}
+
+.photo_preview .caption .score {
+    position: relative;
+    right: 10px;
+    top: -36px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 24px;
+    line-height: 50px;
+    height: 100%;
+    width: 60px;
+    text-align: right;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #555;
+    float: right;
+}
+
+.photo_preview:hover .caption .score, .photo_preview:hover .caption a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.photo_preview:hover .caption {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.yours .photo_preview .caption .title {
+    padding-top: 16px;
+}
+

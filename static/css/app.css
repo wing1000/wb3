@@ -213,6 +213,40 @@ footer p {
     padding: 10px 30px 10px 0px;
 }
 
+.nav_bar {
+    width: 200px;
+    max-width: 200px;
+    height: 100%;
+    z-index: 0;
+}
+
+
+.content_container {
+    padding-right: 40px;
+    padding-left: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content_container:before,
+.content_container:after {
+    display: table;
+    content: " ";
+}
+
+.content_container:after {
+    clear: both;
+}
+
+.content_container:before,
+.content_container:after {
+    display: table;
+    content: " ";
+}
+
+.content_container:after {
+    clear: both;
+}
 .sideNavBar ul {
     list-style: none;
     margin: 0;
@@ -247,3 +281,4 @@ footer p {
     padding: 4px 10px 5px 14px;
     margin-left: 10px
 }
+

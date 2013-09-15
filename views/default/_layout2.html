@@ -5,8 +5,8 @@
     <title>wb3</title>
     <link rel="stylesheet" href="${BASE_URL}/static/bootstrap/css/bootstrap.css" type="text/css"/>
 
+    <link rel="stylesheet" href="${BASE_URL}/static/css/fixed_gird.css" type="text/css"/>
 
-    <link rel="stylesheet" href="${BASE_URL}/static/css/grid900.css" type="text/css"/>
     <link rel="stylesheet" href="${BASE_URL}/static/css/app.css" type="text/css"/>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,8 +32,8 @@
 
 <body>
 
-<div class="row-fluid">
-    <div class="sideNavBar pull-left navbar-fixed-top ">
+<div class="row ">
+    <div class="sideNavBar pull-left navbar-fixed-top nav_bar ">
         <ul class="  side_nav">
             <li>
                 <a href="/" class="logo">
@@ -59,18 +59,19 @@
     </div>
 </div>
 
+<div class="container content_container ">
+    <div class="row ">
+        <div class=" col col-md-offset-3 col-md-9">
 
-<div class="grid_row dashboard">
-    <div class="col col_10">
-        <div class="arrow_top"></div>
-
+        </div>
     </div>
+
 #{_content}
 </div>
 
-<footer>
-    <div class="grid_row">
-        <div class="col col_10">
+<footer class="container">
+    <div class="row">
+        <div class="col col-md-12">
             fjdslfjsdl积分电流声开放的；是
         </div>
     </div>

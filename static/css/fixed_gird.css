@@ -1,0 +1,96 @@
+@charset "utf-8";
+/*fixed_width*/
+.fw {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline;
+    float: left;
+    position: relative;
+}
+
+/*fixed_width_right*/
+.fw_right {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline;
+    float: right;
+    position: relative;
+}
+
+.grid_row {
+    width: auto;
+    margin: 0 auto;
+    z-index: -1000;
+}
+
+.grid_row .grid_row {
+    margin: 0 -10px;
+    width: auto;
+    display: inline-block;
+
+}
+
+/* Column widths, and element width based on grid */
+.w1 {
+    width: 55px;
+}
+
+.w2 {
+    width: 130px;
+}
+
+.w3 {
+    width: 205px;
+}
+
+.w4 {
+    width: 280px;
+}
+
+.w5 {
+    width: 355px;
+}
+
+.w6 {
+    width: 430px;
+}
+
+.w7 {
+    width: 505px;
+}
+
+.w8 {
+    width: 580px;
+}
+
+.w9 {
+    width: 655px;
+}
+
+.w10 {
+    width: 730px;
+}
+
+.w11 {
+    width: 805px;
+}
+
+.w12 {
+    width: 880px;
+}
+
+.w13 {
+    width: 955px;
+}
+
+.w14 {
+    width: 1030px;
+}
+
+.w15 {
+    width: 1105px;
+}
+
+.w16 {
+    width: 1180px;
+}
