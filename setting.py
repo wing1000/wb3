@@ -58,13 +58,13 @@ STORAGE_DOMAIN_NAME = 'attachment'
 # #配置Mysql 数据库信息
 
 MasterDbConfig = {
-    "host": "127.0.0.1:4000",
+    "host": "my:4000",
     "user": "root",
     "password": "",
     "database": "spruce"
 }
 SlaveDbConfig = {
-    "host": "127.0.0.1:4000",
+    "host": "my:4000",
     "user": "root",
     "password": "",
     "database": "spruce"
